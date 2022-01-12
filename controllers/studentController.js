@@ -19,7 +19,7 @@ const grade = async (studentId) =>
     },
     {
       $group: {
-        _id: null,
+        _id: studentId,
         gradeAverage: { $avg: "$assignments.score" },
       },
     },
